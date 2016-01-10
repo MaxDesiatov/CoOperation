@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E21BD5D41C42F87900712409 /* AssociatedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21BD5D31C42F87900712409 /* AssociatedObject.swift */; };
 		E2E4A50B1C42CF8100154F8D /* CoOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = E2E4A50A1C42CF8100154F8D /* CoOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E2E4A5121C42CF8100154F8D /* CoOperation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2E4A5071C42CF8100154F8D /* CoOperation.framework */; };
 		E2E4A5171C42CF8100154F8D /* CoOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E4A5161C42CF8100154F8D /* CoOperationTests.swift */; };
+		E2E4A5221C42CF9E00154F8D /* CoOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E4A5211C42CF9E00154F8D /* CoOperation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,12 +25,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E21BD5D31C42F87900712409 /* AssociatedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssociatedObject.swift; sourceTree = "<group>"; };
 		E2E4A5071C42CF8100154F8D /* CoOperation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoOperation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2E4A50A1C42CF8100154F8D /* CoOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoOperation.h; sourceTree = "<group>"; };
 		E2E4A50C1C42CF8100154F8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2E4A5111C42CF8100154F8D /* CoOperationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoOperationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2E4A5161C42CF8100154F8D /* CoOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoOperationTests.swift; sourceTree = "<group>"; };
 		E2E4A5181C42CF8100154F8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2E4A5211C42CF9E00154F8D /* CoOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoOperation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,8 @@
 			children = (
 				E2E4A50A1C42CF8100154F8D /* CoOperation.h */,
 				E2E4A50C1C42CF8100154F8D /* Info.plist */,
+				E2E4A5211C42CF9E00154F8D /* CoOperation.swift */,
+				E21BD5D31C42F87900712409 /* AssociatedObject.swift */,
 			);
 			path = CoOperation;
 			sourceTree = "<group>";
@@ -194,6 +200,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E21BD5D41C42F87900712409 /* AssociatedObject.swift in Sources */,
+				E2E4A5221C42CF9E00154F8D /* CoOperation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +316,7 @@
 		E2E4A51C1C42CF8100154F8D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -318,12 +327,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.maxdesiatov.CoOperation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		E2E4A51D1C42CF8100154F8D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -376,6 +387,7 @@
 				E2E4A51D1C42CF8100154F8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E2E4A51E1C42CF8100154F8D /* Build configuration list for PBXNativeTarget "CoOperationTests" */ = {
 			isa = XCConfigurationList;
@@ -384,6 +396,7 @@
 				E2E4A5201C42CF8100154F8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E21BD5D41C42F87900712409 /* AssociatedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21BD5D31C42F87900712409 /* AssociatedObject.swift */; };
+		E21BD5D41C42F87900712409 /* WeakAssociatedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21BD5D31C42F87900712409 /* WeakAssociatedObject.swift */; };
 		E2E4A50B1C42CF8100154F8D /* CoOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = E2E4A50A1C42CF8100154F8D /* CoOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E2E4A5121C42CF8100154F8D /* CoOperation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2E4A5071C42CF8100154F8D /* CoOperation.framework */; };
 		E2E4A5171C42CF8100154F8D /* CoOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E4A5161C42CF8100154F8D /* CoOperationTests.swift */; };
@@ -25,7 +25,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E21BD5D31C42F87900712409 /* AssociatedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssociatedObject.swift; sourceTree = "<group>"; };
+		E21BD5D31C42F87900712409 /* WeakAssociatedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakAssociatedObject.swift; sourceTree = "<group>"; };
 		E2E4A5071C42CF8100154F8D /* CoOperation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoOperation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2E4A50A1C42CF8100154F8D /* CoOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoOperation.h; sourceTree = "<group>"; };
 		E2E4A50C1C42CF8100154F8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 				E2E4A50A1C42CF8100154F8D /* CoOperation.h */,
 				E2E4A50C1C42CF8100154F8D /* Info.plist */,
 				E2E4A5211C42CF9E00154F8D /* CoOperation.swift */,
-				E21BD5D31C42F87900712409 /* AssociatedObject.swift */,
+				E21BD5D31C42F87900712409 /* WeakAssociatedObject.swift */,
 			);
 			path = CoOperation;
 			sourceTree = "<group>";
@@ -200,7 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E21BD5D41C42F87900712409 /* AssociatedObject.swift in Sources */,
+				E21BD5D41C42F87900712409 /* WeakAssociatedObject.swift in Sources */,
 				E2E4A5221C42CF9E00154F8D /* CoOperation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

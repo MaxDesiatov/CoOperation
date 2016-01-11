@@ -99,4 +99,4 @@ extension Producer {
   }
 }
 
-// op1.then(op2).then(OP3Constructor)
+// op1.then(op2).then(OP3.init)

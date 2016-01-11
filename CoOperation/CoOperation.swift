@@ -11,7 +11,7 @@ import Foundation
 protocol Operational {
   func start()
 
-  var completion: (() -> ())? { get set }
+  var onCompletion: (() -> ())? { get set }
 }
 
 protocol Enqueueable: Operational {
@@ -25,7 +25,7 @@ extension NSOperation: Enqueueable {
     static var operationQueue = "operationQueue"
   }
 
-  func then(op: NSOperation) -> NSOperation {
+  func seq(op: NSOperation) -> NSOperation {
     op.addDependency(self)
 
     if let q = queue {
@@ -42,7 +42,7 @@ extension NSOperation: Enqueueable {
   // thread or to the specific thread that is capable of doing it. For example, 
   // if you have a custom thread for coordinating the completion of the 
   // operation, you could use the completion block to ping that thread.
-  var completion: (() -> ())? {
+  var onCompletion: (() -> ())? {
     get {
       return completionBlock
     }
@@ -74,10 +74,14 @@ extension NSOperation: Enqueueable {
   }
 }
 
+protocol Failable: Operational {
+  var onFailure: (ErrorType -> ()) { get set }
+}
+
 protocol Producer: Operational {
   typealias Result
 
-  var resultCompletion: (Result -> ())? { get set }
+  var onSuccess: (Result -> ())? { get set }
 }
 
 protocol Consumer: Operational {
@@ -89,7 +93,7 @@ protocol Consumer: Operational {
 extension Producer {
   mutating func then<C where C: Consumer,
   C.Input == Result>(handler: Result -> C) {
-    resultCompletion = { r in
+    onSuccess = { r in
       handler(r).start()
     }
   }
